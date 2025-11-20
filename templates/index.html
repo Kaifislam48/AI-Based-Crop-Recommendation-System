@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Crop Recommendation System 🌾</h1>
+        <p class="subtitle">Enter soil and environmental parameters below:</p>
+
+        <form action="/predict" method="post" class="form-grid">
+            <div class="input-group">
+                <label for="N">Nitrogen (N)</label>
+                <input type="number" step="any" name="N" id="N" required>
+            </div>
+            <div class="input-group">
+                <label for="P">Phosphorus (P)</label>
+                <input type="number" step="any" name="P" id="P" required>
+            </div>
+            <div class="input-group">
+                <label for="K">Potassium (K)</label>
+                <input type="number" step="any" name="K" id="K" required>
+            </div>
+            <div class="input-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" step="any" name="temperature" id="temperature" required>
+            </div>
+            <div class="input-group">
+                <label for="humidity">Humidity (%)</label>
+                <input type="number" step="any" name="humidity" id="humidity" required>
+            </div>
+            <div class="input-group">
+                <label for="ph">pH</label>
+                <input type="number" step="any" name="ph" id="ph" required>
+            </div>
+            <div class="input-group">
+                <label for="rainfall">Rainfall (mm)</label>
+                <input type="number" step="any" name="rainfall" id="rainfall" required>
+            </div>
+
+            <button type="submit">🌱 Predict Crop</button>
+        </form>
+    </div>
+</body>
+</html>

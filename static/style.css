@@ -1,0 +1,184 @@
+/* 🌾 Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a3d9a5, #56ab2f);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 1s ease;
+}
+
+/* 🎨 Animated Gradient Background */
+@keyframes gradientShift {
+    0% { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+    50% { background: linear-gradient(135deg, #43cea2, #185a9d); }
+    100% { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+}
+body {
+    animation: gradientShift 12s ease infinite;
+}
+
+/* 🧱 Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌿 Title */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #eaf8ea;
+    margin-bottom: 25px;
+}
+
+/* 🧩 Form Layout */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.input-group {
+    flex: 1 1 45%;
+    text-align: left;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.input-group:hover {
+    transform: scale(1.05);
+    color: #d5ffd5;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #f3fff3;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #9be15d;
+    transform: scale(1.03);
+}
+
+/* 🌱 Button */
+button {
+    background: linear-gradient(45deg, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #56ab2f, #a8e063);
+    box-shadow: 0 0 25px #a8e063;
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* 🌾 Result Page */
+.result h2 {
+    font-size: 2em;
+    color: #fff;
+    margin: 20px 0;
+    text-shadow: 0 0 15px #a8e063;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.result h2:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 30px #fff;
+}
+
+/* 🔙 Back Button */
+.back-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #185a9d, #43cea2);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn:hover {
+    background: linear-gradient(45deg, #43cea2, #56ab2f);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #56ab2f;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    input {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
