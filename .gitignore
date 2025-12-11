@@ -1,0 +1,26 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual envs
+myenv/
+env/
+venv/
+*.venv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data / models (do not commit large binaries)
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.ckpt
+data/
+# keep CSV tracked, so do not ignore *.csv
+
+# OS
+.DS_Store
+Thumbs.db
